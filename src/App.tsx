@@ -32,6 +32,10 @@ const App = () => {
   }
 
   const generateSolanaWallet = (mnemonic: string) => {
+    if(mnemonic === ''){
+      alert('Please generate a mnemonic first')
+      return
+    }
     const seed = mnemonicToSeed(mnemonic);
     const path = `m/44'/501'/${solanaIdx}'/0'`;
     const newSeed = derivePath
@@ -44,6 +48,10 @@ const App = () => {
   }
 
   const generateEthereumWallet = async (mnemonic: string) => {
+    if(mnemonic === '') {
+      alert('Please generate a mnemonic first')
+      return
+    }
     const seed = await mnemonicToSeed(mnemonic);
     const path = `m/44'/60'/${etherIdx}'/0'`;
     const hdNode = HDNodeWallet.fromSeed(seed);
