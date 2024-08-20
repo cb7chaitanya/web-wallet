@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# Web Wallet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A web-based wallet application built with React, TypeScript, and Vite.**
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Supports multiple chains utilizing Alchemy's RPC provider (Solana and Ethereum)
 
-## Expanding the ESLint configuration
+* Wallet management with private key and address generation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* Balance display for each blockchain platform
 
-- Configure the top-level `parserOptions` property like this:
+* Copy and view buttons for easy address and private key management
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies Used
+* React 
+* TypeScript 
+* Web3.js for interacting with the Solana blockchain
+* Ethers.js for interacting with the Ethereum blockchain
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Getting Started
+* **Clone the repository:** git clone https://github.com/your-username/web-wallet.git
+* **Install dependencies:** npm install or yarn install
+* **Start the development server:** npm run dev or yarn dev
+* Open your web browser and navigate to http://localhost:3000
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Configuration
+* **Solana URL:** VITE_SOL_URL
+* **Ethereum URL:** VITE_ETH_URL
