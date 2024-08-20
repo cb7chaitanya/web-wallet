@@ -7,8 +7,8 @@ const WalletSwitcher = ({setWalletType} : {setWalletType: any }) => {
 
   return (
     <div className="flex p-4">
-      <Button name={"Solana"} onClick={() => handleClick('solana')} className="border-r-2 border-r-black px-4 py-2"/>
-      <Button name={"Ethereum"} onClick={() => handleClick('ethereum')} className="px-4 py-2"/>
+      <Button name={"Solana"} onClick={() => handleClick('solana')} className="border-r-2 border-r-zinc-300 px-6 py-2"/>
+      <Button name={"Ethereum"} onClick={() => handleClick('ethereum')} className="px-4 py-"/>
     </div>
   )
 }

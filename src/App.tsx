@@ -58,7 +58,7 @@ const App = () => {
     <div className="flex w-full overflow-hidden min-h-screen items-center flex-col bg-zinc-900">
       <Hero />
       <WalletSwitcher setWalletType={setWalletType}/>
-      <Button className="py-2 px-4 rounded w-[78%]" name="Generate Mnemonic" onClick={getMnemonic} />
+      <Button className="py-2 px-4 rounded w-[78%] border-zinc-300 border-2" name="Generate Mnemonic" onClick={getMnemonic} />
       <div className="flex py-2 px-4 w-[80%]">
         <input className="py-2 w-full px-4 outline-none font-semibold" value={mnemonic}></input>
         {mnemonic && copyButtonClicked ? <CopyButton className="bg-white border-0 px-2 hover:text-gray-500 duration-300" tooltipContent="Copied!" data-tooltip-id="copy-button"  name={mnemonic} label={<MdOutlineDone />} /> : <CopyButton className="bg-white border-0 px-2 hover:text-gray-500 duration-300" name={mnemonic} label={<FaRegCopy />} tooltipContent="Copy to clipboard" data-tooltip-id="copy-button" setState={setCopyButtonClicked} />}
